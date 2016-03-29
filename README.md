@@ -98,6 +98,20 @@ export {v} from "mod";
 This presents a developer experience where it is expected that replacing the
 word `import` with `export` will always provide this symmetric behavior.
 
+However, when there is a gap in this symmetry, it can lead to confusing behavior:
+
+> "I would like to chime in with use-case evidence. When I began using ES6 (via
+> babel) and discovered imports could be re-exported I assumed the feature set
+> would be symmetrical only to find out quite surprisingly that it was not. I
+> would love to see this spec round out what I believe is a slightly incomplete
+> feature set in ES6."
+>
+> - @jasonkuhrt
+>
+> "I also bumped into this and even thought this was a bug in Babel."
+>
+> - @gaearon
+
 ### Proposed addition:
 
 The proposed addition follows this same symmetric pattern:
