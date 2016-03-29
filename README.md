@@ -10,7 +10,7 @@
 
 **Transpiler:** See Babel's `es7.exportExtensions` option.
 
-> NOTE: Tightly related to the [export-ns-from](https://github.com/leebyron/ecmascript-export-ns-from) proposal.
+> NOTE: Closely related to the [export-ns-from](https://github.com/leebyron/ecmascript-export-ns-from) proposal.
 
 ## Problem statement and rationale
 
@@ -186,7 +186,7 @@ export-from's **[[ExportName]]** to import's **[[LocalName]]** and export-from's
 Statement Form                          | [[ModuleRequest]] | [[ImportName]] | [[LocalName]]  | [[ExportName]]
 --------------                          | ----------------- | -------------- | -------------- | --------------
 `import v from "mod";`                  | `"mod"`           | `"default"`    | `"v"`          |
-<ins>`import v from "mod";`</ins>       | `"mod"`           | `"default"`    | **null**       | `"v"`
+<ins>`export v from "mod";`</ins>       | `"mod"`           | `"default"`    | **null**       | `"v"`
 `import {x} from "mod";`                | `"mod"`           | `"x"`          | `"x"`          |
 `export {x} from "mod";`                | `"mod"`           | `"x"`          | **null**       | `"x"`
 `import {x as v} from "mod";`           | `"mod"`           | `"x"`          | `"v"`          |
