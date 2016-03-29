@@ -1,0 +1,629 @@
+<!doctype html>
+<head><meta charset="utf-8">
+<title>ECMAScript export default from</title><script type="application/json" id="menu-search-biblio">[{"type":"clause","id":"intro","aoid":null,"title":"Introduction","number":"","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Introduction"},{"type":"clause","id":"sec-ecmascript-language-scripts-and-modules","aoid":null,"title":"ECMAScript Language: Scripts and Modules","number":"1","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"ECMAScript Language: Scripts and Modules"},{"type":"clause","id":"sec-modules","aoid":null,"title":"Modules","number":"1.1","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Modules"},{"type":"clause","id":"sec-module-semantics","aoid":null,"title":"Module Semantics","number":"1.1.1","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Module Semantics"},{"type":"clause","id":"sec-source-text-module-records","aoid":null,"title":"Source Text Module Records","number":"1.1.1.1","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Source Text Module Records"},{"type":"clause","id":"sec-exports","aoid":null,"title":"Exports","number":"1.1.2","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Exports"},{"type":"clause","id":"sec-exports-static-semantics-boundnames","aoid":null,"title":"Static Semantics: BoundNames","number":"1.1.2.1","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Static Semantics: BoundNames"},{"type":"clause","id":"sec-exports-static-semantics-exportedbindings","aoid":null,"title":"Static Semantics: ExportedBindings","number":"1.1.2.2","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Static Semantics: ExportedBindings"},{"type":"clause","id":"sec-exports-static-semantics-exportednames","aoid":null,"title":"Static Semantics: ExportedNames","number":"1.1.2.3","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Static Semantics: ExportedNames"},{"type":"clause","id":"sec-exports-static-semantics-exportentries","aoid":null,"title":"Static Semantics: ExportEntries","number":"1.1.2.4","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Static Semantics: ExportEntries"},{"type":"clause","id":"sec-static-semantics-exportentriesformodule","aoid":null,"title":"Static Semantics: ExportEntriesForModule","number":"1.1.2.5","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Static Semantics: ExportEntriesForModule"},{"type":"clause","id":"sec-exports-static-semantics-isconstantdeclaration","aoid":null,"title":"Static Semantics: IsConstantDeclaration","number":"1.1.2.6","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Static Semantics: IsConstantDeclaration"},{"type":"clause","id":"sec-exports-static-semantics-lexicallyscopeddeclarations","aoid":null,"title":"Static Semantics: LexicallyScopedDeclarations","number":"1.1.2.7","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Static Semantics: LexicallyScopedDeclarations"},{"type":"clause","id":"sec-exports-static-semantics-modulerequests","aoid":null,"title":"Static Semantics: ModuleRequests","number":"1.1.2.8","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Static Semantics: ModuleRequests"},{"type":"clause","id":"sec-exports-runtime-semantics-evaluation","aoid":null,"title":"Runtime Semantics: Evaluation","number":"1.1.2.9","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Runtime Semantics: Evaluation"},{"type":"production","id":"prod-ExportDeclaration","name":"ExportDeclaration","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"ExportDeclaration"},{"type":"production","id":"prod-ExportFromClause","name":"ExportFromClause","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"ExportFromClause"},{"type":"production","id":"prod-ExportedDefaultBinding","name":"ExportedDefaultBinding","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"ExportedDefaultBinding"},{"type":"production","id":"prod-ExportClause","name":"ExportClause","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"ExportClause"},{"type":"production","id":"prod-NamedExports","name":"NamedExports","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"NamedExports"},{"type":"production","id":"prod-ExportsList","name":"ExportsList","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"ExportsList"},{"type":"production","id":"prod-ExportSpecifier","name":"ExportSpecifier","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"ExportSpecifier"},{"type":"table","id":"table-42","number":1,"caption":"Table 1 (Informative): Export Forms Mappings to ExportEntry Records","namespace":"https://github.com/leebyron/ecmascript-export-default-from","location":"","key":"Table 1 (Informative): Export Forms Mappings to ExportEntry Records"}]</script></head><body><div id="menu-toggle">☰</div><div id="menu"><div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search..."><div id="menu-search-results" class="inactive"></div></div><div id="menu-toc"><ol class="toc"><li><span class="item-toggle-none"></span><a href="#intro" title="Introduction"><span class="secnum"></span> Introduction</a></li><li><span class="item-toggle">◢</span><a href="#sec-ecmascript-language-scripts-and-modules" title="ECMAScript Language: Scripts and Modules"><span class="secnum">1</span> ECMAScript Language: Scripts and Modules</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-modules" title="Modules"><span class="secnum">1.1</span> Modules</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-module-semantics" title="Module Semantics"><span class="secnum">1.1.1</span> Module Semantics</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-source-text-module-records" title="Source Text Module Records"><span class="secnum">1.1.1.1</span> Source Text Module Records</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-exports" title="Exports"><span class="secnum">1.1.2</span> Exports</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-exports-static-semantics-boundnames" title="Static Semantics: BoundNames"><span class="secnum">1.1.2.1</span> SS: BoundNames</a></li><li><span class="item-toggle-none"></span><a href="#sec-exports-static-semantics-exportedbindings" title="Static Semantics: ExportedBindings"><span class="secnum">1.1.2.2</span> SS: ExportedBindings</a></li><li><span class="item-toggle-none"></span><a href="#sec-exports-static-semantics-exportednames" title="Static Semantics: ExportedNames"><span class="secnum">1.1.2.3</span> SS: ExportedNames</a></li><li><span class="item-toggle-none"></span><a href="#sec-exports-static-semantics-exportentries" title="Static Semantics: ExportEntries"><span class="secnum">1.1.2.4</span> SS: ExportEntries</a></li><li><span class="item-toggle-none"></span><a href="#sec-static-semantics-exportentriesformodule" title="Static Semantics: ExportEntriesForModule"><span class="secnum">1.1.2.5</span> SS: ExportEntriesForModule</a></li><li><span class="item-toggle-none"></span><a href="#sec-exports-static-semantics-isconstantdeclaration" title="Static Semantics: IsConstantDeclaration"><span class="secnum">1.1.2.6</span> SS: IsConstantDeclaration</a></li><li><span class="item-toggle-none"></span><a href="#sec-exports-static-semantics-lexicallyscopeddeclarations" title="Static Semantics: LexicallyScopedDeclarations"><span class="secnum">1.1.2.7</span> SS: LexicallyScopedDeclarations</a></li><li><span class="item-toggle-none"></span><a href="#sec-exports-static-semantics-modulerequests" title="Static Semantics: ModuleRequests"><span class="secnum">1.1.2.8</span> SS: ModuleRequests</a></li><li><span class="item-toggle-none"></span><a href="#sec-exports-runtime-semantics-evaluation" title="Runtime Semantics: Evaluation"><span class="secnum">1.1.2.9</span> RS: Evaluation</a></li></ol></li></ol></li></ol></li></ol></div></div><h1 class="version">Stage 1 Draft / March 29, 2016</h1><h1 class="title">ECMAScript export default from</h1>
+<script src="https://bterlson.github.io/ecmarkup/ecmarkup.js" defer=""></script>
+<link rel="stylesheet" href="https://bterlson.github.io/ecmarkup/elements.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_light.min.css">
+<style>
+  tr.ins {
+    background-color: #e0f8e0;
+  }
+  del {
+    text-decoration: none;
+  }
+</style>
+
+<emu-intro id="intro">
+  <h1><span class="secnum"></span>Introduction<span class="utils"><span class="anchor"><a href="#intro">#</a></span></span></h1>
+
+  <p>This proposal adds a new form of "export from" which exports another module's default export
+    as an exported name of another, filling a use case similar to the use cases
+    for existing "export from" forms.</p>
+
+  <p>See  <a href="https://github.com/leebyron/ecmascript-export-default-from">the proposal repository</a> for motivations and more information.</p>
+
+  <emu-note><span class="note">Note 1</span>
+    <p>This proposal is closely related to the  <a href="https://github.com/leebyron/ecmascript-export-ns-from">export ns from</a> proposal.</p>
+  </emu-note>
+
+  <emu-note><span class="note">Note 2</span>
+    <p>This spec proposal is written as a diff against the  <a href="http://www.ecma-international.org/ecma-262/6.0/">existing ECMAScript specification</a>.</p>
+  </emu-note>
+</emu-intro>
+
+<!-- es6num="15" -->
+<emu-clause id="sec-ecmascript-language-scripts-and-modules">
+  <h1><span class="secnum">1</span>ECMAScript Language: Scripts and Modules<span class="utils"><span class="anchor"><a href="#sec-ecmascript-language-scripts-and-modules">#</a></span></span></h1>
+
+  <emu-note><span class="note">Note</span>This is  <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-ecmascript-language-scripts-and-modules">Chapter 15</a> in the current spec.</emu-note>
+
+  <!-- es6num="15.2" -->
+  <emu-clause id="sec-modules">
+    <h1><span class="secnum">1.1</span>Modules<span class="utils"><span class="anchor"><a href="#sec-modules">#</a></span></span></h1>
+
+    <!-- es6num="15.2.1" -->
+    <emu-clause id="sec-module-semantics">
+      <h1><span class="secnum">1.1.1</span>Module Semantics<span class="utils"><span class="anchor"><a href="#sec-module-semantics">#</a></span></span></h1>
+
+      <!-- es6num="15.2.1.16" -->
+      <emu-clause id="sec-source-text-module-records">
+        <h1><span class="secnum">1.1.1.1</span>Source Text Module Records<span class="utils"><span class="anchor"><a href="#sec-source-text-module-records">#</a></span></span></h1>
+
+        <emu-note><span class="note">Note</span>
+          <p><emu-xref href="#table-42"><a href="#table-42">Table 42</a></emu-xref> gives examples of the ExportEntry record fields used to represent the syntactic export forms:</p>
+          <emu-table id="table-42" caption="Export Forms Mappings to ExportEntry Records" informative=""><figure><figcaption>Table 1 (Informative): Export Forms Mappings to ExportEntry Records</figcaption>
+            <table>
+              <tbody>
+              <tr>
+                <th>
+                  Export Statement Form
+                
+                </th>
+                <th>
+                  [[ExportName]]
+                
+                </th>
+                <th>
+                  [[ModuleRequest]]
+                
+                </th>
+                <th>
+                  [[ImportName]]
+                
+                </th>
+                <th>
+                  [[LocalName]]
+                
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <code>export var v;</code>
+                
+                </td>
+                <td>
+                  <code>"v"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <code>"v"</code>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>export default function f(){}</code>
+                
+                </td>
+                <td>
+                  <code>"default"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <code>"f"</code>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>export default function(){}</code>
+                
+                </td>
+                <td>
+                  <code>"default"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <code>"*default*"</code>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>export default 42;</code>
+                
+                </td>
+                <td>
+                  <code>"default"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <code>"*default*"</code>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>export {x};</code>
+                
+                </td>
+                <td>
+                  <code>"x"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <code>"x"</code>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>export {v as x};</code>
+                
+                </td>
+                <td>
+                  <code>"x"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <code>"v"</code>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>export {x} from "mod";</code>
+                
+                </td>
+                <td>
+                  <code>"x"</code>
+                
+                </td>
+                <td>
+                  <code>"mod"</code>
+                
+                </td>
+                <td>
+                  <code>"x"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>export {v as x} from "mod";</code>
+                
+                </td>
+                <td>
+                  <code>"x"</code>
+                
+                </td>
+                <td>
+                  <code>"mod"</code>
+                
+                </td>
+                <td>
+                  <code>"v"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>export * from "mod";</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <code>"mod"</code>
+                
+                </td>
+                <td>
+                  <code>"*"</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+              </tr>
+              <tr class="ins">
+                <td>
+                  <code>export v from "mod";</code>
+                
+                </td>
+                <td>
+                  <emu-val>null</emu-val>
+                
+                </td>
+                <td>
+                  <code>"mod"</code>
+                
+                </td>
+                <td>
+                  <code>"default"</code>
+                
+                </td>
+                <td>
+                  <code>"v"</code>
+                
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </figure></emu-table>
+        </emu-note>
+      </emu-clause>
+
+    </emu-clause>
+
+    <!-- es6num="15.2.3" -->
+    <emu-clause id="sec-exports">
+      <h1><span class="secnum">1.1.2</span>Exports<span class="utils"><span class="anchor"><a href="#sec-exports">#</a></span></span></h1>
+      <h2>Syntax</h2>
+
+      <emu-grammar><emu-production name="ExportDeclaration" id="prod-ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="6c6de801"><emu-t>export</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-VariableStatement">VariableStatement</a></emu-nt></emu-rhs>
+    <emu-rhs a="828f5ae3"><emu-t>export</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-Declaration">Declaration</a></emu-nt></emu-rhs>
+    <emu-rhs a="525566ec"><emu-t>export</emu-t><emu-t>default</emu-t><emu-nt params="Default"><a href="https://tc39.github.io/ecma262/#prod-HoistableDeclaration">HoistableDeclaration</a><emu-mods><emu-params>[Default]</emu-params></emu-mods></emu-nt></emu-rhs>
+    <emu-rhs a="64efdfce"><emu-t>export</emu-t><emu-t>default</emu-t><emu-nt params="Default"><a href="https://tc39.github.io/ecma262/#prod-ClassDeclaration">ClassDeclaration</a><emu-mods><emu-params>[Default]</emu-params></emu-mods></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+      <del class="block">
+      <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="b6878be3"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="6c7ca5a7"><emu-t>export</emu-t><emu-t>default</emu-t><emu-gann>[lookahead ∉ { <emu-t>function</emu-t>, <emu-t>class</emu-t> }]</emu-gann><emu-nt params="In"><a href="https://tc39.github.io/ecma262/#prod-AssignmentExpression">AssignmentExpression</a><emu-mods><emu-params>[In]</emu-params></emu-mods></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+      </del>
+      <ins class="block">
+      <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="2762c7fe"><emu-t>export</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="c4a64110"><emu-t>export</emu-t><emu-t>default</emu-t><emu-gann>[lookahead ∉ { <emu-t>function</emu-t>, <emu-t>class</emu-t>, <emu-t>from</emu-t> }]</emu-gann><emu-nt params="In"><a href="https://tc39.github.io/ecma262/#prod-AssignmentExpression">AssignmentExpression</a><emu-mods><emu-params>[In]</emu-params></emu-mods></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production>
+<emu-production name="ExportFromClause" id="prod-ExportFromClause">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="b01e734d"><emu-t>*</emu-t></emu-rhs>
+    <emu-rhs a="765105e6"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt></emu-rhs>
+    <emu-rhs a="fd74b9b6"><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
+    <emu-rhs a="d56745cc"><emu-nt>NameSpaceExport</emu-nt></emu-rhs>
+    <emu-rhs a="52a576ef"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
+    <emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt>NameSpaceExport</emu-nt></emu-rhs>
+</emu-production>
+<emu-production name="ExportedDefaultBinding" id="prod-ExportedDefaultBinding">
+    <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="0ebb31e2"><emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+      </ins>
+
+      <emu-note><span class="note">Note 1</span>The addition of <code>from</code> to the lookahead after <code>export default</code> allows for the
+        disambiguation of <code>export default from "mod"</code>, which is the proposed syntactic form for
+        exporting <code>"mod"</code>'s default export as this module's default export, from <code>export default from</code>,
+        which is the potentially confusing export of a local named variable <code>from</code>.</emu-note>
+
+      <emu-note><span class="note">Note 2</span>The <emu-nt>NameSpaceExport</emu-nt> is not explicitly part of this proposal, but part of
+        the related  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports">export ns from</a> proposal, shown here for how the two overlap
+        should both proposals be accepted, the static semantics below also include this compound case.
+        The remaining grammar changes are identical to the export ns from proposal.</emu-note>
+
+      <del class="block">
+      <emu-grammar><emu-production name="ExportClause" id="prod-ExportClause">
+    <emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="81ba5a4a"><emu-t>{</emu-t><emu-t>}</emu-t></emu-rhs>
+    <emu-rhs a="29b1414e"><emu-t>{</emu-t><emu-nt><a href="#prod-ExportsList">ExportsList</a></emu-nt><emu-t>}</emu-t></emu-rhs>
+    <emu-rhs a="c16c88fe"><emu-t>{</emu-t><emu-nt><a href="#prod-ExportsList">ExportsList</a></emu-nt><emu-t>,</emu-t><emu-t>}</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+      </del>
+      <ins class="block">
+      <emu-grammar><emu-production name="NamedExports" id="prod-NamedExports">
+    <emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="81ba5a4a"><emu-t>{</emu-t><emu-t>}</emu-t></emu-rhs>
+    <emu-rhs a="29b1414e"><emu-t>{</emu-t><emu-nt><a href="#prod-ExportsList">ExportsList</a></emu-nt><emu-t>}</emu-t></emu-rhs>
+    <emu-rhs a="c16c88fe"><emu-t>{</emu-t><emu-nt><a href="#prod-ExportsList">ExportsList</a></emu-nt><emu-t>,</emu-t><emu-t>}</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+      </ins>
+      <emu-note><span class="note">Note 3</span>Renaming <emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt> to <emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt> reflects the similarly
+        named <emu-nt><a href="https://tc39.github.io/ecma262/#prod-NamedImports">NamedImports</a></emu-nt>, and should be reflected throughout the spec.</emu-note>
+
+      <emu-grammar><emu-production name="ExportsList" id="prod-ExportsList">
+    <emu-nt><a href="#prod-ExportsList">ExportsList</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="5b554fef"><emu-nt><a href="#prod-ExportSpecifier">ExportSpecifier</a></emu-nt></emu-rhs>
+    <emu-rhs a="1907cd0c"><emu-nt><a href="#prod-ExportsList">ExportsList</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="#prod-ExportSpecifier">ExportSpecifier</a></emu-nt></emu-rhs>
+</emu-production>
+<emu-production name="ExportSpecifier" id="prod-ExportSpecifier">
+    <emu-nt><a href="#prod-ExportSpecifier">ExportSpecifier</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="0ebb31e2"><emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt></emu-rhs>
+    <emu-rhs a="a9552c46"><emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt><emu-t>as</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+
+      <!-- es6num="15.2.3.2" -->
+      <emu-clause id="sec-exports-static-semantics-boundnames">
+        <h1><span class="secnum">1.1.2.1</span>Static Semantics: BoundNames<span class="utils"><span class="anchor"><a href="#sec-exports-static-semantics-boundnames">#</a></span></span></h1>
+
+        <emu-note><span class="note">Note</span>This change is the same as proposed by  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-boundnames">export ns from</a>.</emu-note>
+
+        <del class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="b6878be3"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </del>
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="2762c7fe"><emu-t>export</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </ins>
+        <emu-alg><ol><li>Return a new empty <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref>.
+        </li></ol></emu-alg>
+      </emu-clause>
+
+      <!-- es6num="15.2.3.3" -->
+      <emu-clause id="sec-exports-static-semantics-exportedbindings">
+        <h1><span class="secnum">1.1.2.2</span>Static Semantics: ExportedBindings<span class="utils"><span class="anchor"><a href="#sec-exports-static-semantics-exportedbindings">#</a></span></span></h1>
+
+        <emu-note><span class="note">Note</span>This change is the same as proposed by  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-exportedbindings">export ns from</a>.</emu-note>
+
+        <del class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </del>
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </ins>
+        <emu-alg><ol><li>Return a new empty <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref>.
+        </li></ol></emu-alg>
+      </emu-clause>
+
+      <!-- es6num="15.2.3.4" -->
+      <emu-clause id="sec-exports-static-semantics-exportednames">
+        <h1><span class="secnum">1.1.2.3</span>Static Semantics: ExportedNames<span class="utils"><span class="anchor"><a href="#sec-exports-static-semantics-exportednames">#</a></span></span></h1>
+        <del class="block">
+        <emu-grammar><emu-production name="ExportDeclaration" collapsed="">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Return a new empty <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref>.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="b6878be3"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Return the ExportedNames of <emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt>.
+        </li></ol></emu-alg>
+        </del>
+
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportDeclaration" collapsed="">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Return the ExportedNames of ExportFromClause.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportFromClause" collapsed="">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="b01e734d"><emu-t>*</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Return a new empty <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref>.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportFromClause" collapsed="">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="fd74b9b6"><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Return the ExportedNames of <emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt>.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportFromClause" collapsed="">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="765105e6"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Return the ExportedNames of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt>.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportFromClause" collapsed="">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt>NameSpaceExport</emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Let <var>names</var> be the ExportedNames of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt>.</li><li>Append to <var>names</var> the elements of the ExportedNames of <emu-nt>NameSpaceExport</emu-nt>.</li><li>Return <var>names</var>.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportFromClause" collapsed="">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="52a576ef"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Let <var>names</var> be the ExportedNames of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt>.</li><li>Append to <var>names</var> the elements of the ExportedNames of <emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt>.</li><li>Return <var>names</var>.
+        </li></ol></emu-alg>
+        </ins>
+      </emu-clause>
+
+      <!-- es6num="15.2.3.5" -->
+      <emu-clause id="sec-exports-static-semantics-exportentries">
+        <h1><span class="secnum">1.1.2.4</span>Static Semantics: ExportEntries<span class="utils"><span class="anchor"><a href="#sec-exports-static-semantics-exportentries">#</a></span></span></h1>
+
+        <emu-note><span class="note">Note</span>This change is the same as proposed by  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-exportentries">export ns from</a>.</emu-note>
+
+        <del class="block">
+        <emu-grammar><emu-production name="ExportDeclaration" collapsed="">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Let <var>module</var> be the sole element of ModuleRequests of <emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt>.</li><li>Let <var>entry</var> be the <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> {[[ModuleRequest]]: <var>module</var>, [[ImportName]]: <code>"*"</code>, [[LocalName]]: <emu-val>null</emu-val>, [[ExportName]]: <emu-val>null</emu-val> }.</li><li>Return a new <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref> containing <var>entry</var>.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportDeclaration" collapsed="">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Let <var>module</var> be the sole element of ModuleRequests of <emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt>.</li><li>Return ExportEntriesForModule of <emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt> with argument <var>module</var>.
+        </li></ol></emu-alg>
+        </del>
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportDeclaration" collapsed="">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Let <var>module</var> be the sole element of ModuleRequests of <emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt>.</li><li>Return ExportEntriesForModule of <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt> with argument <var>module</var>.
+        </li></ol></emu-alg>
+        </ins>
+      </emu-clause>
+
+      <!-- es6num="15.2.3.6" -->
+      <emu-clause id="sec-static-semantics-exportentriesformodule">
+        <h1><span class="secnum">1.1.2.5</span>Static Semantics: ExportEntriesForModule<span class="utils"><span class="anchor"><a href="#sec-static-semantics-exportentriesformodule">#</a></span></span></h1>
+        <p>With parameter <var>module</var>.</p>
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportFromClause" collapsed="">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="b01e734d"><emu-t>*</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Return a new <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref> containing the <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> {[[ModuleRequest]]: <var>module</var>, [[ImportName]]: "*", [[LocalName]]: null, [[ExportName]]: null }.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportedDefaultBinding" collapsed="">
+    <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="0ebb31e2"><emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Let <var>exportName</var> be the StringValue of <emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt>.</li><li>Return a new <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref> containing the <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> {[[ModuleRequest]]: <var>module</var>, [[ImportName]]: "default", [[LocalName]]: null, [[ExportName]]: <var>exportName</var> }.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportFromClause" collapsed="">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt>NameSpaceExport</emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Let <var>entries</var> be ExportEntriesForModule of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt> with argument <var>module</var>.</li><li>Append to <var>entries</var> the elements of the ExportEntriesForModule of <emu-nt>NameSpaceExport</emu-nt> with argument <var>module</var>.</li><li>Return <var>entries</var>.
+        </li></ol></emu-alg>
+        <emu-grammar><emu-production name="ExportFromClause" collapsed="">
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="52a576ef"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        <emu-alg><ol><li>Let <var>entries</var> be ExportEntriesForModule of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt> with argument <var>module</var>.</li><li>Append to <var>entries</var> the elements of the ExportEntriesForModule of <emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt> with argument <var>module</var>.</li><li>Return <var>entries</var>.
+        </li></ol></emu-alg>
+        </ins>
+      </emu-clause>
+
+      <!-- es6num="15.2.3.7" -->
+      <emu-clause id="sec-exports-static-semantics-isconstantdeclaration">
+        <h1><span class="secnum">1.1.2.6</span>Static Semantics: IsConstantDeclaration<span class="utils"><span class="anchor"><a href="#sec-exports-static-semantics-isconstantdeclaration">#</a></span></span></h1>
+
+        <emu-note><span class="note">Note</span>This change is the same as proposed by  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-isconstantdeclaration">export ns from</a>.</emu-note>
+
+        <del class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="b6878be3"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="e1fe9c4f"><emu-t>export</emu-t><emu-t>default</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-AssignmentExpression">AssignmentExpression</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </del>
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="2762c7fe"><emu-t>export</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="e1fe9c4f"><emu-t>export</emu-t><emu-t>default</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-AssignmentExpression">AssignmentExpression</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </ins>
+        <emu-alg><ol><li>Return <emu-val>false</emu-val>.
+        </li></ol></emu-alg>
+      </emu-clause>
+
+      <!-- es6num="15.2.3.8" -->
+      <emu-clause id="sec-exports-static-semantics-lexicallyscopeddeclarations">
+        <h1><span class="secnum">1.1.2.7</span>Static Semantics: LexicallyScopedDeclarations<span class="utils"><span class="anchor"><a href="#sec-exports-static-semantics-lexicallyscopeddeclarations">#</a></span></span></h1>
+
+        <emu-note><span class="note">Note</span>This change is the same as proposed by  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-lexicallyscopeddeclarations">export ns from</a>.</emu-note>
+
+        <del class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="b6878be3"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="6c6de801"><emu-t>export</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-VariableStatement">VariableStatement</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        </del>
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="2762c7fe"><emu-t>export</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="6c6de801"><emu-t>export</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-VariableStatement">VariableStatement</a></emu-nt></emu-rhs>
+</emu-production></emu-grammar>
+        </ins>
+        <emu-alg><ol><li>Return a new empty <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref>.
+        </li></ol></emu-alg>
+      </emu-clause>
+
+      <!-- es6num="15.2.3.9" -->
+      <emu-clause id="sec-exports-static-semantics-modulerequests">
+        <h1><span class="secnum">1.1.2.8</span>Static Semantics: ModuleRequests<span class="utils"><span class="anchor"><a href="#sec-exports-static-semantics-modulerequests">#</a></span></span></h1>
+
+        <emu-note><span class="note">Note</span>This change is the same as proposed by  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-modulerequests">export ns from</a>.</emu-note>
+
+        <del class="block">
+        <emu-grammar><emu-production name="ExportDeclaration" collapsed="">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production>
+<emu-production name="ExportDeclaration" collapsed="">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </del>
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportDeclaration" collapsed="">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </ins>
+        <emu-alg><ol><li>Return the ModuleRequests of <emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt>.
+        </li></ol></emu-alg>
+      </emu-clause>
+
+      <!-- es6num="15.2.3.11" -->
+      <emu-clause id="sec-exports-runtime-semantics-evaluation">
+        <h1><span class="secnum">1.1.2.9</span>Runtime Semantics: Evaluation<span class="utils"><span class="anchor"><a href="#sec-exports-runtime-semantics-evaluation">#</a></span></span></h1>
+
+        <emu-note><span class="note">Note</span>This change is the same as proposed by  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-evaluation">export ns from</a>.</emu-note>
+
+        <del class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="56ae069c"><emu-t>export</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="54a8804a"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="b6878be3"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportClause">ExportClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </del>
+        <ins class="block">
+        <emu-grammar><emu-production name="ExportDeclaration">
+    <emu-nt><a href="#prod-ExportDeclaration">ExportDeclaration</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="e0a40575"><emu-t>export</emu-t><emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FromClause">FromClause</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+    <emu-rhs a="2762c7fe"><emu-t>export</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt><emu-t>;</emu-t></emu-rhs>
+</emu-production></emu-grammar>
+        </ins>
+        <emu-alg><ol><li>Return <emu-xref aoid="NormalCompletion"><a href="https://tc39.github.io/ecma262/#sec-normalcompletion">NormalCompletion</a></emu-xref>(<emu-const>empty</emu-const>).
+        </li></ol></emu-alg>
+      </emu-clause>
+    </emu-clause>
+  </emu-clause>
+</emu-clause>
+</body>
