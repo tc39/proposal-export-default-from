@@ -4,6 +4,8 @@
 
 **Author:** Lee Byron
 
+**Reviewers:** Caridy Patiño
+
 **Specification:** http://leebyron.com/ecmascript-export-default-from/
 
 **AST:** [ESTree.md](./ESTree.md)
