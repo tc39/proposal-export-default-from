@@ -8,7 +8,7 @@
 
 **AST:** [ESTree.md](./ESTree.md)
 
-**Transpiler:** See Babel's `es7.exportExtensions` option.
+**Transpiler:** See Babel's [transform-export-extensions](http://babeljs.io/docs/plugins/transform-export-extensions/) plugin.
 
 > NOTE: Closely related to the [export-ns-from](https://github.com/leebyron/ecmascript-export-ns-from) proposal.
 
