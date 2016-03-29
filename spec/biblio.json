@@ -1,0 +1,11 @@
+{
+  "http://leebyron.com/ecmascript-export-ns-from/": [
+    {
+      "type": "production",
+      "id": "prod-NameSpaceExport",
+      "name": "NameSpaceExport",
+      "location": "",
+      "key": "NameSpaceExport"
+    }
+  ]
+}
