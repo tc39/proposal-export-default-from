@@ -187,6 +187,48 @@ syntax and semantics without requiring additional specification. An alteration
 to an existing lookahead restriction is necessary for supporting this case.
 
 
+### Common concerns:
+
+> Do we need this even through you can already do this with `export { default } from "mod"`?
+
+Yes! It is true that you can already "export from" a module's default export
+without altering the local scope:
+
+```js
+export { default } from "mod";
+```
+
+You can even rename the default:
+
+```js
+export { default as someIdentifier } from "mod"
+```
+
+There is a benefit to this, it's explicit and it is symmetric with the
+"import" form:
+
+```js
+import { default as someIdentifier } from "mod"
+```
+
+However the purpose of this proposal is not to enable a new use case, the
+purpose is to provide an expected syntactic form which currently does not exist,
+and which favors the "default" export.
+
+That "import" example is not often typed, as there is a preferred shorter syntax:
+
+```js
+import someIdentifier from "mod"
+```
+
+This proposal argues that a similar shorter syntax should also exist for a
+symmetric "export from" form:
+
+```js
+export someIdentifier from "mod"
+```
+
+
 ### Table showing symmetry
 
 Using the terminology of [Table 40][] and [Table 42][] in ECMAScript 2015, the
