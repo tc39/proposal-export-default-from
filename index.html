@@ -12,6 +12,7 @@
     text-decoration: none;
   }
 </style>
+<emu-biblio href="./biblio.json"></emu-biblio>
 
 <emu-intro id="intro">
   <h1><span class="secnum"></span>Introduction<span class="utils"><span class="anchor"><a href="#intro">#</a></span></span></h1>
@@ -333,9 +334,9 @@
     <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="b01e734d"><emu-t>*</emu-t></emu-rhs>
     <emu-rhs a="765105e6"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt></emu-rhs>
     <emu-rhs a="fd74b9b6"><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
-    <emu-rhs a="d56745cc"><emu-nt>NameSpaceExport</emu-nt></emu-rhs>
+    <emu-rhs a="d56745cc"><emu-nt><a href="http://leebyron.com/ecmascript-export-ns-from/#prod-NameSpaceExport">NameSpaceExport</a></emu-nt></emu-rhs>
     <emu-rhs a="52a576ef"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
-    <emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt>NameSpaceExport</emu-nt></emu-rhs>
+    <emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="http://leebyron.com/ecmascript-export-ns-from/#prod-NameSpaceExport">NameSpaceExport</a></emu-nt></emu-rhs>
 </emu-production>
 <emu-production name="ExportedDefaultBinding" id="prod-ExportedDefaultBinding">
     <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="0ebb31e2"><emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt></emu-rhs>
@@ -347,7 +348,7 @@
         exporting <code>"mod"</code>'s default export as this module's default export, from <code>export default from</code>,
         which is the potentially confusing export of a local named variable <code>from</code>.</emu-note>
 
-      <emu-note><span class="note">Note 2</span>The <emu-nt>NameSpaceExport</emu-nt> is not explicitly part of this proposal, but part of
+      <emu-note><span class="note">Note 2</span>The <emu-nt><a href="http://leebyron.com/ecmascript-export-ns-from/#prod-NameSpaceExport">NameSpaceExport</a></emu-nt> is not explicitly part of this proposal, but part of
         the related  <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports">export ns from</a> proposal, shown here for how the two overlap
         should both proposals be accepted, the static semantics below also include this compound case.
         The remaining grammar changes are identical to the export ns from proposal.</emu-note>
@@ -461,9 +462,9 @@
         <emu-alg><ol><li>Return the ExportedNames of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt>.
         </li></ol></emu-alg>
         <emu-grammar><emu-production name="ExportFromClause" collapsed="">
-    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt>NameSpaceExport</emu-nt></emu-rhs>
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="http://leebyron.com/ecmascript-export-ns-from/#prod-NameSpaceExport">NameSpaceExport</a></emu-nt></emu-rhs>
 </emu-production></emu-grammar>
-        <emu-alg><ol><li>Let <var>names</var> be the ExportedNames of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt>.</li><li>Append to <var>names</var> the elements of the ExportedNames of <emu-nt>NameSpaceExport</emu-nt>.</li><li>Return <var>names</var>.
+        <emu-alg><ol><li>Let <var>names</var> be the ExportedNames of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt>.</li><li>Append to <var>names</var> the elements of the ExportedNames of <emu-nt><a href="http://leebyron.com/ecmascript-export-ns-from/#prod-NameSpaceExport">NameSpaceExport</a></emu-nt>.</li><li>Return <var>names</var>.
         </li></ol></emu-alg>
         <emu-grammar><emu-production name="ExportFromClause" collapsed="">
     <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="52a576ef"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
@@ -516,9 +517,9 @@
         <emu-alg><ol><li>Let <var>exportName</var> be the StringValue of <emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt>.</li><li>Return a new <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref> containing the <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> {[[ModuleRequest]]: <var>module</var>, [[ImportName]]: "default", [[LocalName]]: null, [[ExportName]]: <var>exportName</var> }.
         </li></ol></emu-alg>
         <emu-grammar><emu-production name="ExportFromClause" collapsed="">
-    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt>NameSpaceExport</emu-nt></emu-rhs>
+    <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="14e6d763"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="http://leebyron.com/ecmascript-export-ns-from/#prod-NameSpaceExport">NameSpaceExport</a></emu-nt></emu-rhs>
 </emu-production></emu-grammar>
-        <emu-alg><ol><li>Let <var>entries</var> be ExportEntriesForModule of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt> with argument <var>module</var>.</li><li>Append to <var>entries</var> the elements of the ExportEntriesForModule of <emu-nt>NameSpaceExport</emu-nt> with argument <var>module</var>.</li><li>Return <var>entries</var>.
+        <emu-alg><ol><li>Let <var>entries</var> be ExportEntriesForModule of <emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt> with argument <var>module</var>.</li><li>Append to <var>entries</var> the elements of the ExportEntriesForModule of <emu-nt><a href="http://leebyron.com/ecmascript-export-ns-from/#prod-NameSpaceExport">NameSpaceExport</a></emu-nt> with argument <var>module</var>.</li><li>Return <var>entries</var>.
         </li></ol></emu-alg>
         <emu-grammar><emu-production name="ExportFromClause" collapsed="">
     <emu-nt><a href="#prod-ExportFromClause">ExportFromClause</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="52a576ef"><emu-nt><a href="#prod-ExportedDefaultBinding">ExportedDefaultBinding</a></emu-nt><emu-t>,</emu-t><emu-nt><a href="#prod-NamedExports">NamedExports</a></emu-nt></emu-rhs>
