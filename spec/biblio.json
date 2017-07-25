@@ -1,5 +1,5 @@
 {
-  "http://tc39.github.io/proposal-export-default-from/": [
+  "https://tc39.github.io/proposal-export-default-from/": [
     {
       "type": "production",
       "id": "prod-DefaultExportFrom",

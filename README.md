@@ -6,13 +6,13 @@
 
 **Reviewers:** Caridy Patiño
 
-**Specification:** http://tc39.github.io/proposal-export-default-from/
+**Specification:** https://tc39.github.io/proposal-export-default-from/
 
 **AST:** [ESTree.md](./ESTree.md)
 
-**Transpiler:** See Babel's [transform-export-extensions](http://babeljs.io/docs/plugins/transform-export-extensions/) plugin.
+**Transpiler:** See Babel's [transform-export-extensions](https://babeljs.io/docs/plugins/transform-export-extensions/) plugin.
 
-> NOTE: Closely related to the [export-ns-from](https://github.com/leebyron/ecmascript-export-ns-from) proposal.
+> NOTE: Closely related to the [export-ns-from](https://github.com/tc39/proposal-export-ns-from) proposal.
 
 ## Problem statement and rationale
 
