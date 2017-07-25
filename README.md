@@ -6,7 +6,7 @@
 
 **Reviewers:** Caridy Patiño
 
-**Specification:** http://leebyron.com/ecmascript-export-default-from/
+**Specification:** http://tc39.github.io/proposal-export-default-from/
 
 **AST:** [ESTree.md](./ESTree.md)
 
