@@ -1,11 +1,11 @@
 {
-  "http://leebyron.com/ecmascript-export-ns-from/": [
+  "http://tc39.github.io/proposal-export-default-from/": [
     {
       "type": "production",
-      "id": "prod-NameSpaceExport",
-      "name": "NameSpaceExport",
+      "id": "prod-DefaultExportFrom",
+      "name": "DefaultExportFrom",
       "location": "",
-      "key": "NameSpaceExport"
+      "key": "DefaultExportFrom"
     }
   ]
 }
