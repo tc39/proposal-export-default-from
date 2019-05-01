@@ -10,7 +10,7 @@
 
 **AST:** [ESTree.md](./ESTree.md)
 
-**Transpiler:** See Babel's [transform-export-extensions](https://babeljs.io/docs/plugins/transform-export-extensions/) plugin.
+**Transpiler:** See Babel's [export-default-from](https://babeljs.io/docs/en/babel-plugin-proposal-export-default-from) plugin.
 
 > NOTE: Closely related to the [export-ns-from](https://github.com/tc39/proposal-export-ns-from) proposal.
 
