@@ -6,7 +6,7 @@
 
 **Reviewers:** Caridy Patiño
 
-**Specification:** https://tc39.github.io/proposal-export-default-from/
+**Specification:** https://tc39.es/proposal-export-default-from/
 
 **AST:** [ESTree.md](./ESTree.md)
 
@@ -175,7 +175,7 @@ the default export of the outer module. This can be written as:
 export default from "mod";
 ```
 
-This is symmmetric to the (existing) import form:
+This is symmetric to the (existing) import form:
 
 ```js
 import default from "mod";
@@ -191,7 +191,7 @@ to an existing lookahead restriction is necessary for supporting this case.
 
 ### Common concerns:
 
-> Do we need this even through you can already do this with `export { default } from "mod"`?
+> Do we need this even though you can already do this with `export { default } from "mod"`?
 
 Yes! It is true that you can already "export from" a module's default export
 without altering the local scope:
