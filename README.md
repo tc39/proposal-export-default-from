@@ -175,7 +175,7 @@ the default export of the outer module. This can be written as:
 export default from "mod";
 ```
 
-This is symmmetric to the (existing) import form:
+This is symmetric to the (existing) import form:
 
 ```js
 import default from "mod";
@@ -191,7 +191,7 @@ to an existing lookahead restriction is necessary for supporting this case.
 
 ### Common concerns:
 
-> Do we need this even through you can already do this with `export { default } from "mod"`?
+> Do we need this even though you can already do this with `export { default } from "mod"`?
 
 Yes! It is true that you can already "export from" a module's default export
 without altering the local scope:
@@ -213,7 +213,7 @@ There is a benefit to this, it's explicit and it is symmetric with the
 import { default as someIdentifier } from "mod"
 ```
 
-However the purpose of this proposal is not to enable a new use case, the
+However, the purpose of this proposal is not to enable a new use case, the
 purpose is to provide an expected syntactic form which currently does not exist,
 and which favors the "default" export.
 
