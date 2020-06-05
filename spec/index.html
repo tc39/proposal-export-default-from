@@ -7,8 +7,8 @@ location: https://github.com/leebyron/ecmascript-export-default-from
 copyright: false
 contributors: Lee Byron
 </pre>
-<script src="https://bterlson.github.io/ecmarkup/ecmarkup.js" defer></script>
-<link rel="stylesheet" href="https://bterlson.github.io/ecmarkup/elements.css">
+<script src="https://tc39.es/ecmarkup/ecmarkup.js" defer></script>
+<link rel="stylesheet" href="https://tc39.es/ecmarkup/elements.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_light.min.css">
 <style>
   tr.ins {
@@ -27,14 +27,14 @@ contributors: Lee Byron
     as an exported name of another, filling a use case similar to the use cases
     for existing "export from" forms.</p>
 
-  <p>See <a href="https://github.com/leebyron/ecmascript-export-default-from">the proposal repository</a> for motivations and more information.</p>
+  <p>See <a href="https://github.com/tc39/proposal-export-default-from">the proposal repository</a> for motivations and more information.</p>
 
   <emu-note>
-    <p>This proposal is closely related to the <a href="https://github.com/leebyron/ecmascript-export-ns-from">export ns from</a> proposal.</p>
+    <p>This proposal is closely related to the <a href="https://github.com/tc39/proposal-export-ns-from">export ns from</a> proposal.</p>
   </emu-note>
 
   <emu-note>
-    <p>This spec proposal is written as a diff against the <a href="http://www.ecma-international.org/ecma-262/6.0/">existing ECMAScript specification</a>.</p>
+    <p>This spec proposal is written as a diff against the <a href="https://tc39.es/ecma262/">existing ECMAScript specification</a>.</p>
   </emu-note>
 </emu-intro>
 
@@ -42,7 +42,7 @@ contributors: Lee Byron
 <emu-clause id="sec-ecmascript-language-scripts-and-modules">
   <h1>ECMAScript Language: Scripts and Modules</h1>
 
-  <emu-note>This is <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-ecmascript-language-scripts-and-modules">Chapter 15</a> in the current spec.</emu-note>
+  <emu-note>This is <a href="https://tc39.es/ecma262/#sec-ecmascript-language-scripts-and-modules">Chapter 15</a> in the current spec.</emu-note>
 
   <!-- es6num="15.2" -->
   <emu-clause id="sec-modules">
@@ -303,7 +303,7 @@ contributors: Lee Byron
         which is the potentially confusing export of a local named variable `from`.</emu-note>
 
       <emu-note>The |NameSpaceExport| is not explicitly part of this proposal, but part of
-        the related <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports">export ns from</a> proposal, shown here for how the two overlap
+        the related <a href="https://tc39.es/proposal-export-ns-from/#sec-exports">export ns from</a> proposal, shown here for how the two overlap
         should both proposals be accepted, the static semantics below also include this compound case.
         The remaining grammar changes are identical to the export ns from proposal.</emu-note>
 
@@ -340,7 +340,7 @@ contributors: Lee Byron
       <emu-clause id="sec-exports-static-semantics-boundnames">
         <h1>Static Semantics: BoundNames</h1>
 
-        <emu-note>This change is the same as proposed by <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-boundnames">export ns from</a>.</emu-note>
+        <emu-note>This change is the same as proposed by <a href="https://tc39.es/proposal-export-ns-from/#sec-exports-static-semantics-boundnames">export ns from</a>.</emu-note>
 
         <del class="block">
         <emu-grammar>
@@ -366,7 +366,7 @@ contributors: Lee Byron
       <emu-clause id="sec-exports-static-semantics-exportedbindings">
         <h1>Static Semantics: ExportedBindings</h1>
 
-        <emu-note>This change is the same as proposed by <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-exportedbindings">export ns from</a>.</emu-note>
+        <emu-note>This change is the same as proposed by <a href="https://tc39.es/proposal-export-ns-from/#sec-exports-static-semantics-exportedbindings">export ns from</a>.</emu-note>
 
         <del class="block">
         <emu-grammar>
@@ -440,7 +440,7 @@ contributors: Lee Byron
       <emu-clause id="sec-exports-static-semantics-exportentries">
         <h1>Static Semantics: ExportEntries</h1>
 
-        <emu-note>This change is the same as proposed by <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-exportentries">export ns from</a>.</emu-note>
+        <emu-note>This change is the same as proposed by <a href="https://tc39.es/proposal-export-ns-from/#sec-exports-static-semantics-exportentries">export ns from</a>.</emu-note>
 
         <del class="block">
         <emu-grammar>ExportDeclaration : `export` `*` FromClause `;`</emu-grammar>
@@ -497,7 +497,7 @@ contributors: Lee Byron
       <emu-clause id="sec-exports-static-semantics-isconstantdeclaration">
         <h1>Static Semantics: IsConstantDeclaration</h1>
 
-        <emu-note>This change is the same as proposed by <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-isconstantdeclaration">export ns from</a>.</emu-note>
+        <emu-note>This change is the same as proposed by <a href="https://tc39.es/proposal-export-ns-from/#sec-exports-static-semantics-isconstantdeclaration">export ns from</a>.</emu-note>
 
         <del class="block">
         <emu-grammar>
@@ -525,7 +525,7 @@ contributors: Lee Byron
       <emu-clause id="sec-exports-static-semantics-lexicallyscopeddeclarations">
         <h1>Static Semantics: LexicallyScopedDeclarations</h1>
 
-        <emu-note>This change is the same as proposed by <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-lexicallyscopeddeclarations">export ns from</a>.</emu-note>
+        <emu-note>This change is the same as proposed by <a href="https://tc39.es/proposal-export-ns-from/#sec-exports-static-semantics-lexicallyscopeddeclarations">export ns from</a>.</emu-note>
 
         <del class="block">
         <emu-grammar>
@@ -553,7 +553,7 @@ contributors: Lee Byron
       <emu-clause id="sec-exports-static-semantics-modulerequests">
         <h1>Static Semantics: ModuleRequests</h1>
 
-        <emu-note>This change is the same as proposed by <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-modulerequests">export ns from</a>.</emu-note>
+        <emu-note>This change is the same as proposed by <a href="https://tc39.es/proposal-export-ns-from/#sec-exports-static-semantics-modulerequests">export ns from</a>.</emu-note>
 
         <del class="block">
         <emu-grammar>
@@ -576,7 +576,7 @@ contributors: Lee Byron
       <emu-clause id="sec-exports-runtime-semantics-evaluation">
         <h1>Runtime Semantics: Evaluation</h1>
 
-        <emu-note>This change is the same as proposed by <a href="http://leebyron.com/ecmascript-export-ns-from/#sec-exports-static-semantics-evaluation">export ns from</a>.</emu-note>
+        <emu-note>This change is the same as proposed by <a href="https://tc39.es/proposal-export-ns-from/#sec-exports-runtime-semantics-evaluation">export ns from</a>.</emu-note>
 
         <del class="block">
         <emu-grammar>
