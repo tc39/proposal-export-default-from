@@ -57,6 +57,7 @@ Export Statement Form           | [[ModuleRequest]] | [[ImportName]] | [[LocalNa
 `export default 42;`            | **null**          | **null**       | `"*default*"` | `"default"`
 `export {x}`;                   | **null**          | **null**       | `"x"`         | `"x"`
 `export {x as v}`;              | **null**          | **null**       | `"x"`         | `"v"`
+`export * as ns from "mod";`    | `"mod"`           | `"*"`          | **null**      | `"ns"`
 `export {x} from "mod"`;        | `"mod"`           | `"x"`          | **null**      | `"x"`
 `export {x as v} from "mod"`;   | `"mod"`           | `"x"`          | **null**      | `"v"`
 `export * from "mod"`;          | `"mod"`           | `"*"`          | **null**      | **null**
@@ -250,4 +251,5 @@ Statement Form                          | [[ModuleRequest]] | [[ImportName]] | [
 `import {x as v} from "mod";`           | `"mod"`           | `"x"`          | `"v"`          |
 `export {x as v} from "mod";`           | `"mod"`           | `"x"`          | **null**       | `"v"`
 `import * as ns from "mod";`            | `"mod"`           | `"*"`          | `"ns"`         |
+`export * as ns from "mod";`            | `"mod"`           | `"*"`          | **null**       | `"ns"`
 `export * from "mod";`                  | `"mod"`           | `"*"`          | **null**       | **null** (many)
